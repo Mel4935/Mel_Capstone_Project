@@ -16,12 +16,12 @@ lp = LandingPage(driver)
 lp.click_login()
 time.sleep(4)
 
+
 # Register username and password
 rg = RegPage(driver)
 rg.getUsername()
 rg.getEmail()
 rg.getButton()
-
 time.sleep(4)
 
 # Click Login

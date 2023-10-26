@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import Select  # Import the Select class
+from selenium.webdriver.support.ui import Select
 
 class ProductPage:
     def __init__(self, driver):
@@ -15,10 +15,10 @@ class ProductPage:
             )
             assert Search_Box.is_displayed(), "Search Box is not displayed on the page."
             Search_Box.send_keys("PC")  # Input text into the search box
-            return Search_Box  # Return the located element
+
         except Exception as e:
             print(f"Error: {e}")
-            return None  # Return None in case of an error
+
     def Show_Amount_Entries(self):
 
         try:
@@ -29,7 +29,7 @@ class ProductPage:
 
             # Use the Select class to interact with the dropdown
             select = Select(Show_Entries)
-            select.select_by_value("100")  # Select the desired option by its value
+            select.select_by_value("100")  # Select the wanted option by its value
 
         except Exception as e:
             print(f"Assertion failed: {e}")

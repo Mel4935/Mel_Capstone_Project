@@ -14,7 +14,7 @@ class RegPage:
                 EC.presence_of_element_located((By.XPATH, '//input[@name="username"]'))
             )
             assert username.is_displayed(), "User Button not displayed on the page."
-            username.send_keys("Mel")
+            username.send_keys("Melt")
 
         except Exception as e:
             print(f"Assertion failed: {e}")
@@ -25,7 +25,7 @@ class RegPage:
                 EC.presence_of_element_located((By.XPATH, '//input[@name="email"]'))
             )
             assert email.is_displayed(), "Email input is not displayed on the page."
-            email.send_keys("Melat@gmail.com")
+            email.send_keys("Melaot@gmail.com")
 
         except Exception as e:
             print(f"Assertion failed: {e}")
